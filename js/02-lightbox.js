@@ -13,16 +13,7 @@ const imageListArr = galleryItems
 
 gallery.insertAdjacentHTML("beforeend", imageListArr);
 
-gallery.addEventListener("click", showOriginaImg);
-
-function showOriginaImg(e) {
-  e.preventDefault();
-  if (e.target.nodeName !== "IMG") {
-    return;
-  }
-
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionDelay: 250,
-    captionsData: "alt",
-  });
-}
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionDelay: 250,
+  captionsData: "alt",
+});
